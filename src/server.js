@@ -10,7 +10,7 @@ app.set('views', path.join(__dirname, 'views'))
 
 
 // Configuração de arquivos estáticos
-app.use(express.static('public'))
+app.use(express.static(path.join(__dirname, '../public')));
 
 // Configuração para ler dados da requisição
 app.use(express.urlencoded({extended: true}))
