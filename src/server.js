@@ -20,7 +20,7 @@ app.use(express.urlencoded({extended: true}))
 app.use(router)
 
 
-const APP = 3000
+const APP = process.env.PORT || 3000
 app.listen(APP, () =>{
     console.log(`Servidor rodando em: http://localhost:${APP}`)
 })
