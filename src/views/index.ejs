@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LISTA DE TAREFAS</title>
+    <link rel="stylesheet" href="/assets/home.css">
+</head>
+<body>
+    <h1 class="titleAll">LISTA DE TAREFAS</h1>
+<div>
+    <%- include('partials/criarTarefa') %>
+</div>
+
+    <div class="ContainerAllTasks">
+        <% tasks.forEach(task => { %>
+            <div class="ContainerTask">
+                <div class="taskDetails">
+                    <h1 class="taskTitle">
+                        <%= task.title %>
+                    </h1>
+                    <p class="taskContent"><%= task.content %></p>
+                </div>
+                <div class="btnDeleteContainer">
+                    <form action="/admin/delete/<%= task.id %>" method="post">
+                        <button type="submit" class="btnDelete">DELETAR</button>
+                    </form>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</body>
+</html>

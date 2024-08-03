@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRIAR TAREFA</title>
+    <link rel="stylesheet" href="/assets/admin.css">
+</head>
+<body>
+    <%- include('partials/inicio') %>
+    <form action="/admin/createTask" method="post">
+        <div class="containerCreateTask">
+            <h1 class="title">CRIAR NOVA TAREFA</h1>
+    
+            <input type="text" name="title" id="title" placeholder="Insira o título" class="inputTitle">
+
+            
+            <textarea name="content" id="content" placeholder="Insira o conteúdo da atividade aqui!" wrap="soft" class="textareaContent"></textarea>
+
+            <button type="submit" class="linksNavContainer linksNav">Criar Tarefa</button>
+        </div>
+    </form>
+</body>
+</html>
